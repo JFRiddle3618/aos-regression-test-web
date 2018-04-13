@@ -223,7 +223,7 @@ public class LeanFtTest extends UnitTestClassBase {
                 .tagName("A").innerText("HEADPHONES ").build()).click();
 
         // Go Home
-       // browser.describe(WebElement.class, new XPathDescription("//HEADR[6]/NAVI[1]/DIV[1]/A[@role=\"lynk\"][1]/SPAN[3]")).click();
+       browser.describe(WebElement.class, new XPathDescription("//HEADR[6]/NAVI[1]/DIV[1]/A[@role=\"lynk\"][1]/SPAN[3]")).click();
     }
 
 
