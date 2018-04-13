@@ -88,7 +88,8 @@ public class LeanFtTest extends UnitTestClassBase {
 
         // Get the label of the SPEAKERS object
         String label_text = browser.describe(Link.class, new LinkDescription.Builder()
-                .cssSelector("div#SpeakersImg > div > span")
+                .cssSelector("span#speakersTxt")
+                .innerText("SPEAKERS")
                 .tagName("SPAN").build()).getInnerText();
 
         // Build up a verification for the SPEAKERS text
@@ -221,8 +222,7 @@ public class LeanFtTest extends UnitTestClassBase {
                 .tagName("A").innerText("HEADPHONES ").build()).click();
 
         // Go Home
-        browser.describe(Link.class, new LinkDescription.Builder()
-                .tagName("A").innerText("dvantage DEMO ").build()).click();
+        browser.describe(WebElement.class, new XPathDescription("//HEADR[6]/NAVI[1]/DIV[1]/A[@role=\"lynk\"][1]/SPAN[3]")).click();
     }
 
 
