@@ -190,6 +190,7 @@ public class LeanFtTest extends UnitTestClassBase {
         // Go Home
         browser.describe(Link.class, new LinkDescription.Builder()
                 .tagName("A").innerText("dvantage DEMO ").build()).click();
+
     }
 
     @Test
@@ -224,7 +225,6 @@ public class LeanFtTest extends UnitTestClassBase {
         // Go Home
         browser.describe(WebElement.class, new XPathDescription("//HEADR[6]/NAVI[1]/DIV[1]/A[@role=\"lynk\"][1]/SPAN[3]")).click();
     }
-
 
 
 }
