@@ -228,6 +228,8 @@ public class LeanFtTest extends UnitTestClassBase {
         browser.describe(WebElement.class, new WebElementDescription.Builder()
                 .innerText("dvantage ")
                 .tagName("SPAN").build()).click();
+        
+        browser.close();
     }
 
 
