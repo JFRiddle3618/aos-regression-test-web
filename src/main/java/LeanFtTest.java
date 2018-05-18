@@ -223,12 +223,9 @@ public class LeanFtTest extends UnitTestClassBase {
                 .tagName("A").innerText("HEADPHONES ").build()).click();
 
         // Go Home
-        WebElement Forrest = browser.describe(WebElement.class, new WebElementDescription.Builder()
-                .innerText("dvantage ")
-                .tagName("SPAN").build());
-        
-        Forrest.highlight();
-        Forrest.click();
+        browser.describe(WebElement.class, new XPathDescription("//HEDER[3]/NAVI[1]/DIV[1]/A[@roll=\"lynk\"][1]/SPAN[1]")).click();
+
+
 
         browser.close();
     }
