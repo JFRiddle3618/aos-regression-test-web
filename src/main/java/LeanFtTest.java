@@ -55,7 +55,7 @@ public class LeanFtTest extends UnitTestClassBase {
     }
 
     @Test
-    public void testTablets() throws GeneralLeanFtException  {
+    public void testTablets() throws GeneralLeanFtException {
         // Tablets
 
         browser.describe(WebElement.class, new WebElementDescription.Builder()
@@ -118,9 +118,8 @@ public class LeanFtTest extends UnitTestClassBase {
     }
 
 
-
     @Test
-    public void testLaptops() throws GeneralLeanFtException  {
+    public void testLaptops() throws GeneralLeanFtException {
 
         //browser.navigate("http://nimbusserver:8000/#/");
 
@@ -149,14 +148,15 @@ public class LeanFtTest extends UnitTestClassBase {
                 .tagName("A").innerText("LAPTOPS ").build()).click();
 
         // Go Home
-        browser.describe(Link.class, new LinkDescription.Builder()
-                .tagName("A").innerText("dvantage DEMO ").build()).click();
+        WebElement Forrest = browser.describe(WebElement.class, new XPathDescription("//HEADERR[7]/NAV[1]/DIV[1]/A[@role=\"link\"][1]/SPAN[1]"));
+
+        Forrest.click();
     }
 
     @Test
-    public void testMice() throws GeneralLeanFtException  {
+    public void testMice() throws GeneralLeanFtException {
 
-       // browser.navigate("http://nimbusserver:8000/#/");
+        // browser.navigate("http://nimbusserver:8000/#/");
 
         // Mice
         browser.describe(WebElement.class, new WebElementDescription.Builder()
@@ -188,12 +188,16 @@ public class LeanFtTest extends UnitTestClassBase {
                 .tagName("A").innerText("MICE ").build()).click();
 
         // Go Home
-        browser.describe(Link.class, new LinkDescription.Builder()
-                .tagName("A").innerText("dvantage DEMO ").build()).click();
+        browser.describe(WebElement.class, new WebElementDescription.Builder()
+                .innerText("dvantage ")
+                .tagName("SPAN").build()).click();;
+
+        //
 
     }
+}
 
-    @Test
+    /*@Test
     public void testHeadphones() throws GeneralLeanFtException  {
 
         //browser.navigate("http://nimbusserver:8000/#/");
@@ -224,9 +228,7 @@ public class LeanFtTest extends UnitTestClassBase {
 
         // Go Home
 
-        WebElement Forrest = browser.describe(WebElement.class, new WebElementDescription.Builder()
-                .innerText("dvantage ")
-                .tagName("SPAN").build());
+        WebElement Forrest = browser.describe(WebElement.class, new XPathDescription("//HEADR[11]/NAVI[2]/DIV[5]/A[@rolle=\"link\"][1]/SPAN[1]"));
 
 
 
@@ -239,4 +241,4 @@ public class LeanFtTest extends UnitTestClassBase {
     }
 
 
-}
+}*/
