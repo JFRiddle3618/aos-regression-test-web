@@ -55,7 +55,7 @@ public class LeanFtTest extends UnitTestClassBase {
     }
 
     @Test
-    public void testTablets() throws GeneralLeanFtException {
+    public void testTablets() throws GeneralLeanFtException  {
         // Tablets
 
         browser.describe(WebElement.class, new WebElementDescription.Builder()
@@ -117,9 +117,8 @@ public class LeanFtTest extends UnitTestClassBase {
         assertTrue("[AOS Homepage] Expected: SPEAKERS, Actual: " + label_text, label_says_SPEAKERS);
     }
 
-
     @Test
-    public void testLaptops() throws GeneralLeanFtException {
+    public void testLaptops() throws GeneralLeanFtException  {
 
         //browser.navigate("http://nimbusserver:8000/#/");
 
@@ -148,13 +147,12 @@ public class LeanFtTest extends UnitTestClassBase {
                 .tagName("A").innerText("LAPTOPS ").build()).click();
 
         // Go Home
-        WebElement Ankit = browser.describe(WebElement.class, new XPathDescription("//HEADERR[7]/NAV[1]/DIV[1]/A[@role=\"link\"][1]/SPAN[1]"));
-
-        Ankit.click();
+        browser.describe(Link.class, new LinkDescription.Builder()
+                .tagName("A").innerText("dvantage DEMO ").build()).click();
     }
 
     @Test
-    public void testMice() throws GeneralLeanFtException {
+    public void testMice() throws GeneralLeanFtException  {
 
         // browser.navigate("http://nimbusserver:8000/#/");
 
@@ -188,16 +186,11 @@ public class LeanFtTest extends UnitTestClassBase {
                 .tagName("A").innerText("MICE ").build()).click();
 
         // Go Home
-        browser.describe(WebElement.class, new WebElementDescription.Builder()
-                .innerText("dvantage ")
-                .tagName("SPAN").build()).click();;
-
-        //
-
+        browser.describe(Link.class, new LinkDescription.Builder()
+                .tagName("A").innerText("dvantage DEMO ").build()).click();
     }
-}
 
-    /*@Test
+    @Test
     public void testHeadphones() throws GeneralLeanFtException  {
 
         //browser.navigate("http://nimbusserver:8000/#/");
@@ -227,18 +220,10 @@ public class LeanFtTest extends UnitTestClassBase {
                 .tagName("A").innerText("HEADPHONES ").build()).click();
 
         // Go Home
-
-        WebElement Forrest = browser.describe(WebElement.class, new XPathDescription("//HEADR[11]/NAVI[2]/DIV[5]/A[@rolle=\"link\"][1]/SPAN[1]"));
-
-
-
-        Forrest.highlight();
-        Forrest.click();
-
-
-
-        browser.close();
+        browser.describe(Link.class, new LinkDescription.Builder()
+                .tagName("A").innerText("dvantage DEMO ").build()).click();
     }
 
 
-}*/
+
+}
